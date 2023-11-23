@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "454999920378",
+    "project_id": "bloomiq-pro-a46df",
+    "storage_bucket": "bloomiq-pro-a46df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454999920378:android:f901d32744da144e6f4343",
+        "android_client_info": {
+          "package_name": "com.nccdms.bloomiqpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454999920378-b34lmmqd3un1b1ahmv2or7ft6jamcfol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nccdms.bloomiqpro",
+            "certificate_hash": "8eb3b98ada8686f0dcc46558727334d78863cf81"
+          }
+        },
+        {
+          "client_id": "454999920378-2prp4g0clg3pbou9e7cuhmrc7h4ra3ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwS6vOa9egcBJJNRqLdcrHuolWDYBGUH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454999920378-2prp4g0clg3pbou9e7cuhmrc7h4ra3ut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
