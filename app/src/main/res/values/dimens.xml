@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_margin_12dp">12dp</dimen>
+    <dimen name="fragment_margin_16dp">16dp</dimen>
+    <dimen name="fragment_margin_18dp">18dp</dimen>
+    <dimen name="icon_padding">8dp</dimen>
+</resources>

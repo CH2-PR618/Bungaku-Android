@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/seed"
+    tools:context=".ui.login.LoginFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_apk"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/logo_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rosse"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/fragment_margin_18dp"
+        android:layout_marginStart="70dp"
+        android:src="@drawable/rosse_flower"
+        android:contentDescription="@string/picture_rosses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toStartOf="@id/edelwaise"/>
+
+    <ImageView
+        android:id="@+id/edelwaise"
+        android:layout_width="110dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="70dp"
+        android:src="@drawable/edelwaise_flower"
+        android:contentDescription="@string/picture_edelweiss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rosse"
+        app:layout_constraintTop_toTopOf="@id/rosse" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_margin_18dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/welcome"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/md_theme_light_tertiary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rosse" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_margin_12dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/desc_menu"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/md_theme_light_tertiary"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_margin_18dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/welcome_attention"
+        android:textColor="@color/md_theme_light_tertiary"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <com.nccdms.bloomiqpro.ui.costum.CostumEmailTextField
+        android:id="@+id/emailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fragment_margin_12dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <com.nccdms.bloomiqpro.ui.costum.CostumePasswordTextField
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="@dimen/fragment_margin_12dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_dontAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/dontAccount"
+        android:textColor="@color/md_theme_light_tertiary"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/register"
+        android:textColor="@color/md_theme_light_tertiary"
+        app:layout_constraintStart_toEndOf="@+id/tv_dontAccount"
+        app:layout_constraintTop_toTopOf="@+id/tv_dontAccount"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@+id/tv_dontAccount"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dontAccount" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

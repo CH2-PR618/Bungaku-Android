@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">BloomIQ Pro</string>
+    <string name="welcome">Welcome in Bloomiq!</string>
+    <string name="desc_menu">Explore the world of flowers with Bloomiq! Recognize, learn about origins, and discover unique stories behind each bloom for a fun floral learning experience.</string>
+    <string name="welcome_attention">Let\'s start your educational journey!</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="username_validation_empty">Enter a username!</string>
+    <string name="email_validation_empty">Enter a email address!</string>
+    <string name="email_validation">Invalid email</string>
+    <string name="password_valid_empty">Enter your password</string>
+    <string name="password_length">This section cannot be less than 8 characters</string>
+    <string name="picture_rosses">Picture Rosses</string>
+    <string name="picture_edelweiss">Picture Edelweiss</string>
+    <string name="dontAccount">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="logo_desc">logo bloomiq</string>
+    <string name="tv_haveAccount">Have an account?</string>
+    <string name="tv_joinSign">Join Bloomiq!</string>
+    <string name="tv_signUp">Register to Discover the Beauty of Flowers:</string>
 </resources>
