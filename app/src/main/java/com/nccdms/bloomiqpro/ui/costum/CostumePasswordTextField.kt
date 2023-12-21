@@ -4,18 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
-import android.view.MotionEvent
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.nccdms.bloomiqpro.R
 
 class CostumePasswordTextField:TextInputEditText {
-    private var isPasswordVisible = false
-
     constructor(context: Context) : super(context) {
         init()
     }
@@ -61,8 +56,6 @@ class CostumePasswordTextField:TextInputEditText {
 
             }
         })
-
     }
-
 
 }

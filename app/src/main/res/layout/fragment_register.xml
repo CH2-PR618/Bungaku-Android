@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/seed"
-    tools:context=".ui.register.RegisterFragment">
+    tools:context=".ui.auth.register.RegisterFragment">
 
     <ImageView
         android:id="@+id/logo"
@@ -94,16 +94,28 @@
         app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <com.nccdms.bloomiqpro.ui.costum.CostumePasswordMatchField
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_margin_12dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/tv_haveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fragment_margin_12dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/tv_haveAccount"
         android:textColor="@color/md_theme_light_tertiary"
-        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+        app:layout_constraintStart_toStartOf="@+id/confirmPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditText" />
 
     <TextView
         android:id="@+id/tv_login"
@@ -125,5 +137,16 @@
         app:layout_constraintStart_toStartOf="@+id/passwordEditText"
         app:layout_constraintTop_toBottomOf="@+id/tv_haveAccount" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

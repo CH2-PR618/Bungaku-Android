@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.core.result.ResultFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/title_result"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/iv_flower"
+        layout="@layout/button_image_input"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="@dimen/fragment_margin_18dp"
+        android:src="@drawable/edelwaise_flower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_inputFlower"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <ImageView
+        android:id="@+id/iv_inputFlower"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/bg_text_fill"
+        android:contentDescription="@string/flower_image"
+        android:src="@drawable/edelwaise_flower"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoadCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_flower" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTakePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/take_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnLoadCamera"
+        app:layout_constraintTop_toTopOf="@+id/btnLoadCamera" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoadCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/load_image"
+        app:layout_constraintBottom_toTopOf="@id/cv_result"
+        app:layout_constraintEnd_toStartOf="@+id/btnTakePicture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_inputFlower" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/fragment_margin_12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLoadCamera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnLoadCamera"
+        app:layout_constraintEnd_toEndOf="@+id/btnTakePicture">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvOutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="@dimen/fragment_margin_12dp"
+                android:text="@string/output"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/result_here"
+                android:textColor="@color/md_theme_light_secondary"
+                app:layout_constraintBottom_toBottomOf="@+id/tvOutput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvOutput"
+                app:layout_constraintTop_toTopOf="@+id/tvOutput" />
+
+            <TextView
+                android:id="@+id/tvPercentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="textEnd"
+                android:text="@string/percentage"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintEnd_toStartOf="@id/tvPercentageValue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClick" />
+
+            <TextView
+                android:id="@+id/tvPercentageValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPercentage"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/poppins_semibold"
+                app:layout_constraintStart_toEndOf="@+id/tvPercentage"
+                app:layout_constraintTop_toTopOf="@+id/tvPercentage" />
+
+            <TextView
+                android:id="@+id/tvClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:textSize="11sp"
+                android:layout_marginStart="@dimen/fragment_margin_12dp"
+                android:text="@string/information_result"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

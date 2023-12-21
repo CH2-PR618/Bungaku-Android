@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTitle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Text" />
+    <style name="Text.Description">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

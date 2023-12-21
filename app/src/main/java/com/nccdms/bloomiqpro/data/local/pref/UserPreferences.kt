@@ -4,7 +4,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -12,26 +12,26 @@ class UserPreferences
 @Inject constructor(
     private val dataStore: DataStore<Preferences>) {
 
-    fun getToken(): Flow<String>{
-        return dataStore.data.map {pref ->
-            pref[TOKEN_KEY] ?: ""
+    suspend fun getSessionId(): String {
+        return dataStore.data.map { pref ->
+            pref[SESSION_ID] ?: ""
+        }.first()
+    }
+
+    suspend fun saveSessionId(sessionId: String) {
+        dataStore.edit { preferences ->
+            preferences[SESSION_ID] = sessionId
         }
     }
 
-    suspend fun setToken(token:String){
-        dataStore.edit {pref ->
-            pref[TOKEN_KEY] = token
+    suspend fun clearSessionId() {
+        dataStore.edit { preferences ->
+            preferences.remove(SESSION_ID)
         }
     }
 
-    suspend fun clearSession(){
-        dataStore.edit {pref ->
-            pref.clear()
-        }
-    }
-
-    companion object{
-        private val TOKEN_KEY = stringPreferencesKey("token_key")
+    companion object {
+        private val SESSION_ID = stringPreferencesKey("session_id")
     }
 }
 

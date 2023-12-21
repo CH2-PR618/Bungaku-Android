@@ -1,7 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="fragment_margin_12dp">12dp</dimen>
     <dimen name="fragment_margin_16dp">16dp</dimen>
     <dimen name="fragment_margin_18dp">18dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">10dp</dimen>
     <dimen name="icon_padding">8dp</dimen>
 </resources>
