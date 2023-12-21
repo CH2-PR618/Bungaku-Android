@@ -24,7 +24,7 @@ class NewNameFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentNewNameBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -50,7 +50,7 @@ class NewNameFragment : BaseFragment() {
                 is ApiResult.Success -> {
                     // Handle successful update
                     showLoading(false)
-                    showToast("Update email successful")
+                    showToast("Update username successful")
                     findNavController().navigateUp()
                 }
                 is ApiResult.Error -> {

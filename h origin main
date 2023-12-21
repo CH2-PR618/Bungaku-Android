@@ -1,0 +1,36 @@
+[33mcommit f226e69da228d84e55cbf3486d7e064ced24578f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31mmandatory/mobile-development[m[33m, [m[1;32mmobile-development[m[33m)[m
+Author: ncccdms <nicodemusalfriyanto@gmail.com>
+Date:   Thu Dec 21 17:44:36 2023 +0700
+
+    Remove .idea/.name file
+
+[33mcommit a72d4f7e7fd82dd107cb8caf5d084db6838700b0[m
+Author: ncccdms <nicodemusalfriyanto@gmail.com>
+Date:   Thu Dec 21 17:18:48 2023 +0700
+
+    first commit
+
+[33mcommit 8644e5caf9695c63ab48ddfdd50b2edcda4aa454[m
+Author: Nmodeoon <nicodemusalfriyanto@gmail.com>
+Date:   Tue Nov 28 01:39:46 2023 +0700
+
+    add ui login, register and logic store user token
+
+[33mcommit 20b3fff6ce9ef768039af1d262c0e8d955183f3b[m
+Merge: 164f557 50e67c9
+Author: Nmodeoon <nicodemusalfriyanto@gmail.com>
+Date:   Fri Nov 24 00:21:31 2023 +0700
+
+    first commit
+
+[33mcommit 164f557fbc6caa820388e82831138ed7f6b2a690[m
+Author: Nmodeoon <nicodemusalfriyanto@gmail.com>
+Date:   Fri Nov 24 00:08:58 2023 +0700
+
+    first commit
+
+[33mcommit 50e67c93424628b3f17a7e1f901b69a13804709a[m
+Author: Muhammad Fauzan Muharram <105500225+Fauzanmhr@users.noreply.github.com>
+Date:   Sun Nov 12 16:29:02 2023 +0700
+
+    Initial commit

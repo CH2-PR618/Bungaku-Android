@@ -48,7 +48,7 @@ class HomeViewModel @Inject constructor(
                 val result = repository.getFlowers()
                 if (result is ApiResult.Success) {
                     // Save the unfiltered list
-                    _flowers.value = result.data!!
+                    _flowers.value = result.data
                 }
                 _flowersResult.value = result
             } catch (e: Exception) {

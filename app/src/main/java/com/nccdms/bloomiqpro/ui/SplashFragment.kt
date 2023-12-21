@@ -54,11 +54,6 @@ class SplashFragment : Fragment() {
         }, delay)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        // Remove any observers or cleanup as needed
-    }
-
     companion object {
         private const val DURATION: Long = 1500
     }

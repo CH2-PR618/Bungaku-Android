@@ -24,7 +24,7 @@ class NewPasswordFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentNewPasswordBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -50,7 +50,7 @@ class NewPasswordFragment : BaseFragment() {
                 is ApiResult.Success -> {
                     // Handle successful update
                     showLoading(false)
-                    showToast("Update email successful")
+                    showToast("Update password successful")
                     findNavController().navigateUp()
                 }
                 is ApiResult.Error -> {
