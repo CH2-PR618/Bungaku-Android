@@ -21,8 +21,8 @@ class HomeViewModel @Inject constructor(
     val flowersResult: LiveData<ApiResult<List<FlowerResponseItem>>> get() = _flowersResult
 
     // LiveData for the unfiltered list of flowers
-    private val _flowers = MutableLiveData<List<FlowerResponseItem>>()
-    val flowers: LiveData<List<FlowerResponseItem>> get() = _flowers
+    private val _flowers = MutableLiveData<List<FlowerResponseItem>?>()
+    val flowers: MutableLiveData<List<FlowerResponseItem>?> get() = _flowers
 
     private val quotes = dummyData
 
